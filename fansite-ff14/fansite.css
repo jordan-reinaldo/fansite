@@ -1,0 +1,399 @@
+/* CSS général */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+nav .menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav .menu li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    padding-left: 100px;
+}
+
+nav .menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #d6d6d6;
+    font-size: 18px;
+}
+
+nav .sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+nav .menu li:hover .sous-menu {
+    display: block;
+}
+
+nav .sous-menu li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+nav .sous-menu li a {
+    color: #010101;
+}
+
+nav .sous-menu li:last-child {
+    border-bottom: none;
+}
+
+
+ul.menu {
+    margin: 0;
+    background-color: black;
+}
+
+nav .menu a:hover {
+    background-color: white;
+    color: black
+}
+
+
+footer {
+    background-color: black;
+}
+
+.titre-footer {
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.liens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.liens-image {
+    padding: 0 15px;
+}
+
+.liens-image:hover {
+    opacity: 50%;
+}
+
+.ml {
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+.article-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer a {
+    color: white;
+    /* Définit la couleur du texte des liens en blanc */
+    text-decoration: none;
+    /* Supprime le soulignement par défaut */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    /* Ajoute un soulignement au survol */
+}
+
+
+/*    CSS story   */
+.body-story {
+    background-image: url(image/fond-crystal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    letter-spacing: 2px;
+}
+
+
+.body-shb {
+    background-image: url(image/fond-lune.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    letter-spacing: 2px;
+}
+
+
+h2 {
+    font-size: 2.5em;
+    margin: 50px 0;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 30px 0;
+}
+
+.titre-page-story {
+    font-size: 3.5em;
+}
+
+.titre {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: transparent;
+}
+
+.story {
+    color: white;
+    margin: 0 250px;
+    border-right: solid white;
+    border-left: solid white;
+    line-height: 1.3em;
+}
+
+.section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.article {
+    margin: 30px 20px;
+}
+
+.image-arr {
+    width: 80%;
+    border: solid rgba(236, 8, 8, 0.158);
+    border-radius: 3px;
+    box-shadow: #010101;
+}
+
+#image-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.espace-texte {
+    margin: 2em 0;
+}
+
+footer {
+    background-color: black;
+}
+
+.titre,
+.image-arr,
+#shinryu-image,
+#image-zone {
+    transition: transform 2s;
+}
+
+.titre:hover,
+.image-arr:hover,
+#shinryu-image:hover {
+    transform: scale(1.15);
+}
+
+#shinryu-image {
+    height: 50%;
+}
+
+/* CSS Protagoniste     */
+
+#titre-protagonistes {
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    background: transparent;
+}
+
+.personnages {
+    font-size: 3.5em;
+    color: white;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.protagonistes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.logo-héros {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.logo-pointer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    cursor: pointer;
+
+}
+
+.logo-pointer:hover {
+    opacity: 100;
+}
+
+.text-personnage {
+    color: white;
+    font-size: 1.5em;
+}
+
+/* CSS galerie */
+
+.grid-galerie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    gap: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.grid-galerie img {
+    width: 100%;
+    height: 100%;
+}
+
+.lien-galerie {
+    position: relative;
+}
+
+/* CSS RAID */
+
+#raid {
+    margin-bottom: 100px;
+}
+
+.container-raid {
+    display: flex;
+    margin: 0 50px;
+}
+
+.image-raid {
+    flex: 50%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.image-raid img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.text-raid {
+    flex: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+}
+
+
+/* CSS contact*/
+
+.section-contact {
+    color: white;
+}
+
+#formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bordform {
+    border-radius: 3vh;
+    border-color: rgba(223, 94, 94, 0.562);
+    margin-bottom: 2vh;
+}
+
+
+
+#message {
+    border-radius: 1vh;
+    border-color: rgba(223, 94, 94, 0.562);
+    margin-bottom: 1vh;
+}
+
+#bouton {
+    border-radius: 3vh;
+}
+
+#bouton:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+/* CSS Actualité  */
+
+.lienfansite {
+    text-decoration: none;
+    color: white;
+}
+
+.lienfansite:hover {
+    text-decoration: underline;
+}
+
+#actualitéliens {
+    list-style: none;
+}
